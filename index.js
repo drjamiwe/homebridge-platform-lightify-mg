@@ -242,7 +242,7 @@ function LightifyAccessory(platform, device) {
                     self.device.brightness = brightness;
                     return connection.dispose();
                 });
-            }, 80);
+            }, 1000);
             callback(null);
         });
     }
@@ -285,7 +285,7 @@ LightifyAccessory.prototype.setHSV = function(hsv) {
         }).then(function() {
             return connection.dispose();
         });
-    }, 100);
+    }, 1000);
 
 }
 LightifyAccessory.prototype.colorBulb = function(platform) {
